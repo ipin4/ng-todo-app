@@ -1,0 +1,16 @@
+<div>
+  <h2>List settings</h2>
+  <div>
+    <label for="typelist">Status Filter: </label>
+    <select name="typelist" [(ngModel)]="selectedFilterValue" (change)="onSetTypeList()">
+      <option *ngFor="let type of types" [ngValue]="type">{{type}}</option>
+    </select>
+    <label for="sortby">Sort by: </label>
+    <select name="sortby" [(ngModel)]="selectedSortValue" (change)="onSetSortValue()">
+      <option *ngFor="let sortType of sortTypes" [ngValue]="sortType">{{sortType}}</option>
+    </select>
+    Older than:
+    <input type="number" min="0" max="100" name="oldest" (keyup)="onOldestChanged()" [(ngModel)]="oldest" [ngModelOptions]="{ updateOn: 'change' }"/>
+    min
+  </div>
+</div>

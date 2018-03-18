@@ -1,0 +1,24 @@
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 15px;
+}
+
+.grid {
+  background-color: #444;
+  padding: 25px;
+
+  a {
+    color: #808885;
+  }
+
+  a:active {
+    color: #afb7b4;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}

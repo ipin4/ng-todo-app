@@ -1,0 +1,12 @@
+<div>
+  <h2>New Item:</h2>
+  <form>
+    <input class="{{validationClass}}" type="text" name="inputValue" (keyup)="onValueChanged()" [(ngModel)]="value" [ngModelOptions]="{ updateOn: 'change' }"/>
+    <div *ngIf="isEdit; else addTemplate">
+      <input type="button" value="Edit" (click)="editTodo()">
+    </div>
+    <ng-template #addTemplate>
+      <input type="button" value="Add" (click)="addTodo()">
+    </ng-template>
+  </form>
+</div>

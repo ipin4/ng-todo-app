@@ -1,0 +1,12 @@
+<h2>Last todos:</h2>
+<ul>
+  <a routerLink="add"><li class="add-todo">Add todo</li></a>
+  <li *ngFor="let todo of showedTodos; let i = index" id="{{todo.id}}">
+    <div class="{{todo.isDone}} done" (click)="changeStatus(i)">Done</div>
+    <div class="{{todo.isDone}} not" (click)="changeStatus(i)">Todo</div>
+    <div class="dataContainer">
+      <div (click)="openEdit(todo.id)">{{i}}: {{todo.title}}</div>
+      <div class="date">{{todo.date}}</div>
+    </div>
+  </li>
+</ul>

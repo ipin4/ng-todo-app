@@ -1,0 +1,64 @@
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #222228;
+    &.add-todo {
+      display: block;
+      text-transform: uppercase;
+      text-align: center;
+      background-color: #38383c;
+      cursor: pointer;
+      &:hover {
+        background-color: #222228;
+      }
+    }
+
+    .done, .not {
+      cursor: pointer;
+      text-align: center;
+      color: #ccc1ac;
+      user-select: none;
+      width: 60px;
+      line-height: 60px;
+      font-weight: bold;
+    }
+
+    .true {
+      &.done {
+        display: block;
+        background-color: #444444;
+      }
+      &.not {
+        display: none;
+      }
+    }
+
+    .false {
+      &.done {
+        display: none;
+      }
+      &.not {
+        display: block;
+        background-color: #151414;
+      }
+    }
+
+    input {
+      margin: 10px 15px 10px 10px;
+    }
+
+    .dataContainer {
+      margin-left: 10px;
+      .date {
+        font-size: 10px;
+        color: #616161;
+      }
+    }
+  }
+}

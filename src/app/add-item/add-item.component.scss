@@ -1,0 +1,24 @@
+form {
+  input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    background-color: #808885;
+    color: #141415;
+    border: 0;
+    &.not-valid {
+      border-bottom: 3px solid #a22e2e;
+    }
+    &.valid {
+      border-bottom: 3px solid green;
+    }
+  }
+  input[type="button"] {
+    margin-top: 10px;
+    background-color: #444444;
+    border: 0;
+    color: #808885;
+    text-transform: uppercase;
+  }
+}
